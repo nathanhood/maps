@@ -2,15 +2,26 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title JS++
+    title Maps++
     link(rel='stylesheet', href='./css/app.css')
   body
-    h1 JS++
+    h1 Maps++
+
+    #controls
+      input#place(type='text', autofocus=true, placeholder='City')
+      button#add Add
+      select#vacations
+        option Select a Vacation
+      button#show Show
+
+    #map
 
     script(src='./js/vendor/traceur.js')
     script(src='./js/vendor/experimental.js')
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/vendor/lodash-2.4.1.js')
     script(src='./js/vendor/moment-2.6.0.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm_SUeYQdgjD_YyysxiCerpJAqixJPMxo&sensor=true")
+    //above script file is the api for google maps. Had to add the api key and activate the sensor by saying 'true' at the end.
     script(src='./js/es5/main.js')
     script(src='./js/es6/main.js')
